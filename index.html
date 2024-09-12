@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="btn_div1">
+        <button class="btn_inicio" onclick="mostrarContainer()">Mostrar Conteúdo</button>
+    </div>
+    <div class="container hidden">
+        <h1>Controle Financeiro</h1>
+        <div class="balance">
+            <h2>SALDO</h2>
+        </div>
+        <div class="balance_money">
+            <p id="balance">R$ 0,00</p>
+        </div>
+        <div class="income-expense">
+            <div>
+                <h3>Entradas</h3>
+                <p id="money-plus" class="money plus">R$0,00</p>
+            </div>
+            <div>
+                <h3>Saídas</h3>
+                <p id="money-minus" class="money minus">R$0,00</p>
+            </div>
+        </div>
+        <h3>Transações</h3>
+        <ul id="list" class="list"></ul>
+        <h3>Adicionar Transação</h3>
+        <form id="form">
+            <div class="form-control">
+                <label for="text">Texto</label>
+                <input type="text" id="text" placeholder="Digite a descrição...">
+            </div>
+            <div class="form-control">
+                <label for="amount">Valor</label>
+                <input type="number" id="amount" placeholder="Digite o valor...">
+            </div>
+            <div class="form-control">
+                <label>Tipo</label>
+                <div class="btn-group">
+                    <button type="button" id="btn-income" class="btn_plus">Entrada</button>
+                    <button type="button" id="btn-expense" class="btn_minus">Saída</button>
+                </div>
+                <div class="btn-groupa_dd">
+                    <button class="btn_add">Adicionar Transação</button>
+                </div>
+            </div>    
+        </form>
+        <div class="btn_div">
+            <button class="btn_voltar" onclick="ocultarContainer()">
+                <img class="icons" src="/icons/voltar.png" alt="">
+            </button>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
